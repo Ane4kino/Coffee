@@ -10,6 +10,7 @@ package com.example.coffee;
 
 
 import android.annotation.SuppressLint;
+import android.app.MediaRouteButton;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -36,6 +37,12 @@ public class MainActivity extends AppCompatActivity {
     public void submitOrder(View view) {
         display(numberOfCoffees);
         displayPrice(numberOfCoffees * priseOfCoffees);
+        displayThankYouMessage();
+    }
+
+    private void displayThankYouMessage() {
+        TextView thankYouTextView = findViewById(R.id.thank_you_text_view);
+        thankYouTextView.setVisibility(View.VISIBLE);
     }
 
     public void increment(View view) {
@@ -68,4 +75,5 @@ public class MainActivity extends AppCompatActivity {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
         priceTextView.setText(NumberFormat.getCurrencyInstance().format(number));
     }
+
 }

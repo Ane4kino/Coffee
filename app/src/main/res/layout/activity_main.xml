@@ -9,19 +9,20 @@
         android:layout_width="match_parent"
         android:background="@drawable/layout_bg"
         android:layout_height="match_parent"
-        android:src="@drawable/_226358"
+        android:src="@drawable/_226358__1_"
         android:antialias="true"
         android:adjustViewBounds="true"
         android:scaleType="centerCrop">
     </ImageView>
 
     <LinearLayout
+        android:id="@+id/block"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:background="@drawable/layout_bg"
         android:orientation="vertical"
         android:padding="16dp"
-        android:background="@drawable/layout_bg"
         tools:context=".MainActivity">
 
 
@@ -58,12 +59,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
+                    android:background="@drawable/layout_bg"
                     android:onClick="increment"
                     android:padding="8dp"
                     android:text="+"
                     android:textColor="@color/white"
                     android:textSize="25sp"
-                    android:background="@drawable/layout_bg"
                     tools:ignore="HardcodedText">
 
                 </Button>
@@ -85,9 +86,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
+                    android:background="@drawable/layout_bg"
                     android:onClick="decrement"
                     android:padding="8dp"
-                    android:background="@drawable/layout_bg"
                     android:text="-"
                     android:textColor="@color/white"
                     android:textSize="25sp"
@@ -137,6 +138,19 @@
                 </TextView>
             </LinearLayout>
         </LinearLayout>
+        <TextView
+            android:id="@+id/thank_you_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Спасибо за заказ!"
+            android:textSize="24sp"
+            android:padding="10dp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/layout_bg"
+            android:visibility="invisible"
+            tools:ignore="NotSibling"
+            />
     </LinearLayout>
 
     <Button
@@ -146,10 +160,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
+        android:layout_margin="10dp"
         android:onClick="submitOrder"
         android:padding="10dp"
         android:text="order"
